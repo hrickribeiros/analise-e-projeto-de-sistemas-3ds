@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+.timer-display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 1rem 0;
+  text-align: center;
+  font-family: monospace;
+}
+
+.timer-display.pause {
+  color: #2980b9;
+}
+
+.status {
+  text-align: center;
+  min-height: 1.5rem;
+  color: #566573;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #34495e;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #9bdbb2;
+  border-color: #27ae60;
+}
+
+button {
+  background: #27ae60;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background: #219150;
+}
+
+button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.stop-btn {
+  background: #e74c3c;
+  display: none;
+}
+
+.stop-btn:hover {
+  background: #c0392b;
+}
+
+.progress-box {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.25rem 0;
+}
+
+.progress-title {
+  display: flex;
+  justify-content: space-between;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+progress {
+  width: 100%;
+  height: 1rem;
+  accent-color: #27ae60;
+}
+
+.history {
+  margin-top: 1.5rem;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.history h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0 0 0.3rem;
+}
+
+.clear-btn {
+  width: auto;
+  padding: 0.3rem 0.6rem;
+  margin: 0;
+  background: transparent;
+  color: #c0392b;
+  font-size: 0.75rem;
+}
+
+.clear-btn:hover {
+  background: #fdecea;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+li {
+  background: #f8f9fa;
+  padding: 0.6rem;
+  border-left: 4px solid #27ae60;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.empty {
+  border-left-color: #bdc3c7;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.hint {
+  color: #7f8c8d;
+  font-size: 0.78rem;
+  margin-top: 0.25rem;
+}

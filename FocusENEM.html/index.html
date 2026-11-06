@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusENEM - Gerenciador Time Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="card">
+    <h1>🎯 FocusENEM - Time Box</h1>
+
+    <div class="form-group">
+      <label for="materia">Área / Matéria do ENEM:</label>
+      <select id="materia">
+        <option value="Matemática">Matemática</option>
+        <option value="Redação">Redação</option>
+        <option value="Linguagens">Linguagens</option>
+        <option value="Ciências da Natureza">Ciências da Natureza</option>
+        <option value="Ciências Humanas">Ciências Humanas</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="topico">Tópico específico:</label>
+      <input type="text" id="topico" placeholder="Ex.: Geometria Plana">
+      <div class="hint">O tópico será salvo no histórico ao concluir o bloco.</div>
+    </div>
+
+    <div class="form-group">
+      <label for="duracao">Duração da Time Box (minutos):</label>
+      <input type="number" id="duracao" value="25" min="1" max="60">
+    </div>
+
+    <div class="form-group">
+      <label for="meta">Meta diária de blocos concluídos:</label>
+      <input type="number" id="meta" value="4" min="1" max="30">
+    </div>
+
+    <div class="timer-display" id="timer" aria-live="polite">25:00</div>
+    <div class="status" id="status">Pronto para começar.</div>
+
+    <button id="startBtn">Iniciar Bloco de Foco</button>
+    <button id="stopBtn" class="stop-btn">Interromper Bloco</button>
+
+    <section class="progress-box" aria-label="Progresso diário">
+      <div class="progress-title">
+        <span>Progresso de hoje</span>
+        <span id="contador">0 / 4 blocos</span>
+      </div>
+      <progress id="progresso" value="0" max="4"></progress>
+    </section>
+
+    <section class="history">
+      <div class="history-header">
+        <h3>Blocos Concluídos</h3>
+        <button class="clear-btn" id="limparBtn">Limpar histórico</button>
+      </div>
+      <ul id="listaHistorico"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
